@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <h1>My Website</h1>
+      <p class="muted">Blogs, ideas, and notes.</p>
+    </div>
+    <nav>
+      <a class="btn" href="index.html">Home</a>
+      <a class="btn" href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Latest Posts</h2>
+      <div class="row">
+        <input id="search" class="input" placeholder="Search posts..." />
+        <select id="sort" class="input">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+          <option value="az">Title A → Z</option>
+          <option value="za">Title Z → A</option>
+        </select>
+      </div>
+
+      <div id="posts" class="posts"></div>
+      <p id="emptyState" class="muted" style="display:none;">No posts yet. Go to Admin to add your first post.</p>
+    </section>
+  </main>
+
+  <footer class="container muted small">
+    © <span id="year"></span> My Website
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    Blog.renderPostList();
+  </script>
+</body>
+</html>
