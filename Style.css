@@ -1,0 +1,503 @@
+/* ============================================
+   Global Styles
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #00a86b;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #e0e0e0;
+  --background-color: #f9f9f9;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--light-text);
+}
+
+/* ============================================
+   Container & Layout
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+
+header {
+  background: white;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand {
+  flex: 1;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* ============================================
+   Cards & Sections
+   ============================================ */
+
+.card {
+  background: white;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.card:first-child {
+  margin-top: 0;
+}
+
+.card.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  text-align: center;
+}
+
+.card.hero h2 {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 2.5rem;
+}
+
+.card.hero p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   Services Grid
+   ============================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service {
+  background: white;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.service ul {
+  margin-left: 1.5rem;
+}
+
+.service li {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-form {
+  background: white;
+}
+
+.contact-info {
+  background: white;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-item h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.contact-item p {
+  margin: 0;
+}
+
+.social-link {
+  margin-right: 0.5rem;
+}
+
+/* ============================================
+   Posts & Blog
+   ============================================ */
+
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.row .input {
+  flex: 1;
+}
+
+#sort {
+  flex: 0;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.post {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.post-excerpt {
+  color: var(--light-text);
+  line-height: 1.5;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+footer {
+  background: white;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.muted {
+  color: var(--light-text);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .brand h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row .input,
+  #sort {
+    flex: 1;
+    width: 100%;
+  }
+
+  .card {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .container {
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand h1 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0.75rem;
+  }
+}
