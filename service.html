@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - My Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <img src="logo.png" alt="Website Logo" class="logo">
+    <div class="brand">
+      <h1>My Website</h1>
+      <p class="muted">Blogs, ideas, and notes.</p>
+    </div>
+    <nav>
+      <a class="btn" href="WEBindex.html">Home</a>
+      <a class="btn" href="about.html">About</a>
+      <a class="btn" href="services.html">Services</a>
+      <a class="btn" href="contact.html">Contact</a>
+      <a class="btn" href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Our Services</h2>
+      <p>We offer a variety of services to help you succeed. Explore our offerings below:</p>
+    </section>
+
+    <div class="services-grid">
+      <section class="card service">
+        <h3>📝 Blog Content</h3>
+        <p>In-depth articles, tutorials, and insights on various topics to keep you informed and inspired.</p>
+        <ul>
+          <li>Weekly articles</li>
+          <li>Expert insights</li>
+          <li>Case studies</li>
+        </ul>
+      </section>
+
+      <section class="card service">
+        <h3>💡 Consulting</h3>
+        <p>Expert advice and guidance to help you make informed decisions and achieve your goals.</p>
+        <ul>
+          <li>Strategy sessions</li>
+          <li>Best practices</li>
+          <li>Custom solutions</li>
+        </ul>
+      </section>
+
+      <section class="card service">
+        <h3>🎓 Training & Workshops</h3>
+        <p>Interactive learning experiences designed to enhance your skills and knowledge.</p>
+        <ul>
+          <li>Online courses</li>
+          <li>Live workshops</li>
+          <li>Certification programs</li>
+        </ul>
+      </section>
+
+      <section class="card service">
+        <h3>🤝 Community Support</h3>
+        <p>Join our community and get support from like-minded individuals and experts.</p>
+        <ul>
+          <li>Discussion forums</li>
+          <li>Networking events</li>
+          <li>Mentorship programs</li>
+        </ul>
+      </section>
+
+      <section class="card service">
+        <h3>🔧 Technical Services</h3>
+        <p>Technical solutions and support for your development and deployment needs.</p>
+        <ul>
+          <li>Code reviews</li>
+          <li>Technical support</li>
+          <li>Development services</li>
+        </ul>
+      </section>
+
+      <section class="card service">
+        <h3>📊 Analytics & Reporting</h3>
+        <p>Data-driven insights to help you understand performance and optimize results.</p>
+        <ul>
+          <li>Performance metrics</li>
+          <li>Custom reports</li>
+          <li>Data analysis</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Ready to Get Started?</h2>
+      <p>Contact us today to learn more about how we can help you achieve your goals.</p>
+      <a class="btn" href="contact.html">Contact Us</a>
+    </section>
+  </main>
+
+  <footer class="container muted small">
+    © <span id="year"></span> My Website
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
